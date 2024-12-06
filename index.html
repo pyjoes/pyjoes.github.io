@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe-Manuel Schlüter | Portfolio</title>
+    <style>
+    /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #000;
+        color: #fff;
+        overflow-y: auto; /* Allow scrolling */
+    }
+
+    body {
+        font-family: 'Courier New', monospace;
+        line-height: 1.6;
+        position: relative;
+        flex: 1; /* Allow body to grow and fill the space */
+    }
+
+    header {
+        text-align: center;
+        padding: 20px;
+        background-color: #111;
+        border-bottom: 2px solid #444;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        font-style: italic;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        flex: 1;
+    }
+
+    section {
+        margin-bottom: 40px;
+    }
+
+    section h2 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #444;
+    }
+
+    .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        background-color: #111;
+        padding: 20px;
+        border: 1px solid #444;
+        border-radius: 5px;
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .card a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 15px;
+        color: #fff;
+        background-color: #1e90ff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    .card a:hover {
+        background-color: #0077cc;
+    }
+
+    footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #111;
+        border-top: 2px solid #444;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    footer a {
+        color: #1e90ff;
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
+    }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Python + Chatbots = Fun</h1>
+        <p>Chatbot development with Python!</p>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hi! I'm Joe-Manuel Schlüter, a tech enthusiast and passionate Python developer with a special interest in creating chatbots.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="card">
+                    <h3>GitHub Projects</h3>
+                    <p>Building chatbots with python by using latest AI technologies.</p>
+                    <a href="https://github.com/pyjoes" target="_blank">View</a>
+                </div>
+                <div class="card">
+                    <h3>Coding Challenges</h3>
+                    <p>Solving coding challenges to sharpen my skills and for fun.</p>
+                    <a href="https://www.codewars.com/users/pyjoes" target="_blank">View</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="projects">
+                <div class="card">
+                    <h3>Python</h3>
+                    <p>Proficient in Python for building efficient chatbot systems.</p>
+                </div>
+                <div class="card">
+                    <h3>NLP</h3>
+                    <p>Experience with libraries like NLTK, spaCy, and transformers.</p>
+                </div>
+                <div class="card">
+                    <h3>Machine Learning</h3>
+                    <p>Knowledge of ML algorithms and frameworks like TensorFlow.</p>
+                </div>
+                <div class="card">
+                    <h3>API Integration</h3>
+                    <p>Skilled in integrating chatbots with APIs.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>
+            Made with ❤️ by Joe-Manuel Schlüter
+        </p>
+    </footer>
+</body>
+</html>
