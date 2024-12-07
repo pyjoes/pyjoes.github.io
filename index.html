@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Joe-Manuel Schlüter's portfolio, including AI projects, certificates, and skills in Python and machine learning.">
+    <meta name="keywords" content="Joe-Manuel Schlüter, Python, AI, Machine Learning, Portfolio, Coding, Certificates, Projects">
+    <meta name="author" content="Joe-Manuel Schlüter">
+    <meta property="og:title" content="Joe-Manuel Schlüter | Portfolio">
+    <meta property="og:description" content="Explore Joe-Manuel Schlüter's portfolio, including AI projects, certificates, and skills in Python and machine learning.">
+    <meta property="og:image" content="https://www.example.com/your-image.jpg"> <!-- Replace with your image URL -->
+    <meta property="og:url" content="https://www.yourwebsite.com">
+    <meta property="og:type" content="website">
     <title>Joe-Manuel Schlüter | Portfolio</title>
-    <!-- Font Awesome for icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
     /* General Reset */
     * {
@@ -21,6 +27,8 @@
         background-color: #000;
         color: #fff;
         overflow-y: auto;
+        overflow-x: hidden;  /* Prevent horizontal scrolling */
+        width: 100%;          /* Ensure the width is confined to the viewport */
     }
 
     body {
@@ -48,10 +56,11 @@
     }
 
     .container {
-        max-width: 1200px;
+        max-width: 100%;      /* Ensure the container doesn't overflow horizontally */
         margin: 20px auto;
         padding: 20px;
         flex: 1;
+        box-sizing: border-box; /* Ensure padding does not add to the width */
     }
 
     section {
@@ -76,6 +85,7 @@
         border: 1px solid #444;
         border-radius: 5px;
         transition: transform 0.3s;
+        box-sizing: border-box; /* Make sure padding doesn't push elements beyond the viewport */
     }
 
     .card:hover {
@@ -112,6 +122,7 @@
         gap: 20px;
         justify-content: center;
         margin-top: 20px;
+        flex-wrap: wrap;  /* Allow buttons to wrap to the next line */
     }
 
     .social-buttons a {
@@ -123,27 +134,12 @@
         display: inline-block;
         transition: background-color 0.3s, transform 0.3s;
         text-align: center;
+        background-color: #333;
     }
 
     .social-buttons a:hover {
         transform: translateY(-5px);
         opacity: 0.8;
-    }
-
-    .social-buttons .youtube {
-        background-color: #333;
-    }
-
-    .social-buttons .instagram {
-        background-color: #333;
-    }
-
-    .social-buttons .bluesky {
-        background-color: #333;
-    }
-
-    .social-buttons .github {
-        background-color: #333;
     }
 
     footer {
@@ -164,6 +160,17 @@
 
     footer a:hover {
         text-decoration: underline;
+    }
+
+    /* Optional: Add this if you want to ensure content fits well on smaller screens */
+    @media (max-width: 375px) {  /* For iPhone SE size */
+        .projects, .certificates, .skills, .contact {
+            grid-template-columns: 1fr;  /* Make sure all content fits in a single column */
+        }
+        .social-buttons {
+            flex-direction: column;  /* Stack the social buttons vertically */
+            gap: 10px;  /* Adjust the gap between stacked buttons */
+        }
     }
     </style>
 </head>
